@@ -2,13 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="437f5c6d-38e0-4572-8c0a-7c5dd727296e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/BikeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/BikeControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/BikeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/impl/BikeRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/BikerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/BikeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Marca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/MarcaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/projetointer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projetointer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/BikeshopApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/BikeshopApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/BikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/BikeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/BikeControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/BikeControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/BikeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/impl/BikeRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/BikerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/BikerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/BikeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/BikeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +57,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -62,7 +72,7 @@
   <component name="RunManager">
     <configuration name="BikeshopApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.br.bikeshop.BikeshopApplication" />
-      <module name="bikeshop" />
+      <module name="projetointer" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.br.bikeshop.*" />
@@ -96,10 +106,23 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="524" y="115" width="544" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1584144696016">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="677" y="178" key="#BikeshopApplication" timestamp="1586035401243">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="677" y="178" key="#BikeshopApplication/0.0.1920.1040@0.0.1920.1040" timestamp="1586035401243" />
+    <state x="740" y="224" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1586035384413">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="224" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586035384413" />
+    <state x="675" y="124" width="544" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1586034710110">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="675" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586034710110" />
     <state x="524" y="115" width="544" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1584144696016" />
+    <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586034048303">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586034048303" />
     <state x="275" y="324" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583887865627">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -108,25 +131,33 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="469" y="278" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/67.27.1299.741@67.27.1299.741" timestamp="1583887867361" />
+    <state x="694" y="281" key="EnvironmentVariablesDialog" timestamp="1586035387609">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="694" y="281" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586035387609" />
     <state x="499" y="154" width="501" height="484" key="FileChooserDialogImpl" timestamp="1584643104854">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="499" y="154" width="501" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1584643104854" />
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1583889727358">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1586035544118">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586035544118" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1583889727358" />
-    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1583889727357">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1586035544117">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586035544117" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1583889727357" />
-    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1583889727355">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1586035544116">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586035544116" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1583889727355" />
-    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1583889727357">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1586035544118">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586035544118" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1583889727357" />
     <state x="249" y="54" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1584644775520">
       <screen x="67" y="27" width="1299" height="741" />
@@ -136,9 +167,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1584644845150" />
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1584644636319">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="451" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1586033752472">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="451" y="276" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586033752472" />
     <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1584644636319" />
     <state x="0" y="27" width="778" height="741" key="find.popup" timestamp="1584140849872">
       <screen x="67" y="27" width="1299" height="741" />
