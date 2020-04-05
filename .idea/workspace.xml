@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="437f5c6d-38e0-4572-8c0a-7c5dd727296e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Marca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/MarcaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/projetointer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projetointer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Bicicleta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Cor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Modelo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/BicicletaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/view/BicicletaView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/BikeshopApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/BikeshopApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/BikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/BikeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/BikeControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/BikeControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/BikeRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/impl/BikeRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Marca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Marca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/MarcaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/MarcaRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/BikerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/BikerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/BikeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/BikeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
@@ -63,7 +60,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -115,14 +112,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="677" y="178" key="#BikeshopApplication/0.0.1920.1040@0.0.1920.1040" timestamp="1586035401243" />
+    <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1586040744297">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586040744297" />
     <state x="740" y="224" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1586035384413">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="224" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586035384413" />
-    <state x="675" y="124" width="544" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1586034710110">
+    <state x="675" y="124" width="544" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1586054670020">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="675" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586034710110" />
+    <state x="675" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586054670020" />
     <state x="524" y="115" width="544" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1584144696016" />
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586034048303">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -136,6 +137,14 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="469" y="278" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/67.27.1299.741@67.27.1299.741" timestamp="1583887867361" />
+    <state x="697" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586038300701">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="697" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586038300701" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586055734693">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586055734693" />
     <state x="694" y="281" key="EnvironmentVariablesDialog" timestamp="1586035387609">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -144,25 +153,25 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="499" y="154" width="501" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1584643104854" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1586035544118">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1586036816079">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586035544118" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586036816079" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1583889727358" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1586035544117">
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1586036816079">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586035544117" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586036816079" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1583889727357" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1586035544116">
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1586036816078">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586035544116" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586036816078" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1583889727355" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1586035544118">
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1586036816079">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586035544118" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586036816079" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1583889727357" />
     <state x="249" y="54" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1584644775520">
       <screen x="67" y="27" width="1299" height="741" />
@@ -181,5 +190,9 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="0" y="27" width="778" height="741" key="find.popup/67.27.1299.741@67.27.1299.741" timestamp="1584140849872" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1586037032601">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586037032601" />
   </component>
 </project>
