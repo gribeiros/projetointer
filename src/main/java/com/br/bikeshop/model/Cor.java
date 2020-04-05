@@ -59,4 +59,13 @@ public class Cor implements Serializable {
     public int hashCode() {
         return Objects.hash(getId(), getNome(), getBicicletas());
     }
+
+    @Override
+    public String toString() {
+        return "Cor{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", bicicletas=" + bicicletas +
+                '}';
+    }
 }

@@ -79,4 +79,14 @@ public class Bicicleta implements Serializable {
     public int hashCode() {
         return Objects.hash(getId(), getMarca(), getCor(), getModelo());
     }
+
+    @Override
+    public String toString() {
+        return "Bicicleta{" +
+                "id=" + id +
+                ", marca=" + marca +
+                ", cor=" + cor +
+                ", modelo=" + modelo +
+                '}';
+    }
 }

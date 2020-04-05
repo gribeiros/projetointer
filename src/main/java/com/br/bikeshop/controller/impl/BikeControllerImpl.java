@@ -14,6 +14,7 @@ import java.util.Optional;
 
 @Controller
 public class BikeControllerImpl implements BikeController {
+
     @Autowired
     BikerService bikerService;
 
@@ -28,6 +29,8 @@ public class BikeControllerImpl implements BikeController {
     @Override
     public ResponseEntity bicicletas() {
         List<Bicicleta> bicicletas = bikerService.returnBicicletas();
+
+        System.out.println(bicicletas);
 
         return new ResponseEntity(bicicletas, HttpStatus.OK);
     }

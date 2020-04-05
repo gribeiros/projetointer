@@ -59,4 +59,13 @@ public class Modelo implements Serializable {
     public int hashCode() {
         return Objects.hash(getId(), getNome(), getBicicletas());
     }
+
+    @Override
+    public String toString() {
+        return "Modelo{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", bicicletas=" + bicicletas +
+                '}';
+    }
 }

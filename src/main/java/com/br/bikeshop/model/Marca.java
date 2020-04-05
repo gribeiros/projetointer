@@ -59,4 +59,13 @@ public class Marca implements Serializable {
     public int hashCode() {
         return Objects.hash(getId(), getNome(), getBicicletas());
     }
+
+    @Override
+    public String toString() {
+        return "Marca{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", bicicletas=" + bicicletas +
+                '}';
+    }
 }

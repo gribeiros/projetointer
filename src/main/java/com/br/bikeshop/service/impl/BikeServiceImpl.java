@@ -32,7 +32,7 @@ public class BikeServiceImpl implements BikerService {
     @Override
     @Transactional(readOnly = true)
     public List<Bicicleta> returnBicicletas() {
-        List<Bicicleta> bicicletas = bicicletaRepository.findAll();
+        List<Bicicleta> bicicletas = bicicletaRepository.returnAll();
 
         return bicicletas;
     }
