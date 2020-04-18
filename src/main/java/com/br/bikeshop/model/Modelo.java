@@ -5,9 +5,9 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-@Entity(name = "Marca")
-@Table(name = "marca")
-public class Marca implements Serializable {
+@Entity(name = "Modelo")
+@Table(name = "modelo")
+public class Modelo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -18,7 +18,7 @@ public class Marca implements Serializable {
     @Column(name = "nome")
     private String nome;
 
-    @OneToMany(mappedBy = "marca")
+    @OneToMany(mappedBy = "modelo")
     private List<Bicicleta> bicicletas;
 
     public Long getId() {
@@ -48,11 +48,11 @@ public class Marca implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Marca)) return false;
-        Marca marca = (Marca) o;
-        return getId().equals(marca.getId()) &&
-                getNome().equals(marca.getNome()) &&
-                getBicicletas().equals(marca.getBicicletas());
+        if (!(o instanceof Modelo)) return false;
+        Modelo modelo = (Modelo) o;
+        return getId().equals(modelo.getId()) &&
+                getNome().equals(modelo.getNome()) &&
+                getBicicletas().equals(modelo.getBicicletas());
     }
 
     @Override
@@ -62,7 +62,7 @@ public class Marca implements Serializable {
 
     @Override
     public String toString() {
-        return "Marca{" +
+        return "Modelo{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", bicicletas=" + bicicletas +
