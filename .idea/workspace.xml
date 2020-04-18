@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="437f5c6d-38e0-4572-8c0a-7c5dd727296e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_flywaydb_flyway_core_6_0_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/mysql/V1__init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/projetointer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projetointer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Bicicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Bicicleta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Cor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Cor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Marca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Marca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Modelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="437f5c6d-38e0-4572-8c0a-7c5dd727296e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
