@@ -6,6 +6,7 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/mysql/V1__init.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/projetointer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projetointer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Bicicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Bicicleta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Cor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Cor.java" afterDir="false" />
