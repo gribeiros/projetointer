@@ -18,7 +18,7 @@ public class Modelo implements Serializable {
     @Column(name = "nome")
     private String nome;
 
-    @OneToMany(mappedBy = "modelo")
+    @OneToMany(mappedBy = "modelo", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Bicicleta> bicicletas;
 
     public Long getId() {

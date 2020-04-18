@@ -18,7 +18,7 @@ public class Cor implements Serializable {
     @Column(name = "nome")
     private String nome;
 
-    @OneToMany(mappedBy = "cor")
+    @OneToMany(mappedBy = "cor", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Bicicleta> bicicletas;
 
     public Long getId() {
