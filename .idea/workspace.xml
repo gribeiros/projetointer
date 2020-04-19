@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="437f5c6d-38e0-4572-8c0a-7c5dd727296e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/projetointer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projetointer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_04_2020_15_25__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_04_2020_15_25__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/BikeControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/BikeControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Bicicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Bicicleta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Cor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Cor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Marca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Marca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Modelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/BicicletaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/BicicletaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/BikeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/BikeServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="437f5c6d-38e0-4572-8c0a-7c5dd727296e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
