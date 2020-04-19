@@ -5,6 +5,8 @@ import com.br.bikeshop.model.Marca;
 import com.br.bikeshop.repository.BicicletaRepository;
 import com.br.bikeshop.repository.MarcaRepository;
 import com.br.bikeshop.service.BikerService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,25 +16,27 @@ import java.util.Optional;
 
 
 @Service
+@Transactional
 public class BikeServiceImpl implements BikerService {
 
-    @Autowired
-    MarcaRepository marcaRepository;
+    private static final Logger log = LoggerFactory.getLogger(BikeServiceImpl.class);
 
     @Autowired
-    BicicletaRepository bicicletaRepository;
+    private MarcaRepository marcaRepository;
+
+    @Autowired
+    private BicicletaRepository bicicletaRepository;
 
     @Override
     @Transactional(readOnly = true)
     public List<Marca> retunMarca() {
-        List<Marca> marca = marcaRepository.findAll();
-        return marca;
+        return marcaRepository.findAll();
     }
 
     @Override
     @Transactional(readOnly = true)
     public List<Bicicleta> returnBicicletas() {
-        List<Bicicleta> bicicletas = bicicletaRepository.findAll();
+        List<Bicicleta> bicicletas = bicicletaRepository.returnAll();
 
         return bicicletas;
     }

@@ -1,9 +1,10 @@
 package com.br.bikeshop.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
-import java.util.Objects;
 
 @Entity(name = "Modelo")
 @Table(name = "modelo")
@@ -18,8 +19,12 @@ public class Modelo implements Serializable {
     @Column(name = "nome")
     private String nome;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "modelo", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Bicicleta> bicicletas;
+
+    public Modelo() {
+    }
 
     public Long getId() {
         return id;
@@ -45,27 +50,4 @@ public class Modelo implements Serializable {
         this.bicicletas = bicicletas;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Modelo)) return false;
-        Modelo modelo = (Modelo) o;
-        return getId().equals(modelo.getId()) &&
-                getNome().equals(modelo.getNome()) &&
-                getBicicletas().equals(modelo.getBicicletas());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId(), getNome(), getBicicletas());
-    }
-
-    @Override
-    public String toString() {
-        return "Modelo{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", bicicletas=" + bicicletas +
-                '}';
-    }
 }
