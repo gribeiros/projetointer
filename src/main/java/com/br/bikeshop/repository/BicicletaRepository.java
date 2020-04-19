@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface BicicletaRepository extends JpaRepository<Bicicleta, Long> {
 
-    @Query("from Bicicleta b,Cor c,Modelo mo,Marca m JOIN FETCH b.marca mf JOIN FETCH b.cor cf JOIN FETCH b.modelo mof where cf=c.id and mf = m.id and mof = mo.id")
+    @Query("Select b from Bicicleta b,Cor c,Modelo mo,Marca m JOIN FETCH b.marca mf JOIN FETCH b.cor cf JOIN FETCH b.modelo mof where cf=c.id and mf = m.id and mof = mo.id")
     List<Bicicleta> returnAll();
 
 }
