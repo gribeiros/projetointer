@@ -5,18 +5,21 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @ResponseBody
-@RequestMapping(path="/")
+@RequestMapping(path = "/")
 public interface BikeController {
-	
-	@GetMapping(path="/marcas")
-	ResponseEntity marcas();
 
-	@GetMapping(path="/bicicletas")
-	ResponseEntity bicicletas();
+    @GetMapping(path = "/bicicletas")
+    ResponseEntity bicicletas();
 
-	@GetMapping(path="/bicicleta/{id}")
-	ResponseEntity bicicleta(@PathVariable Long id);
+    @GetMapping(path = "/bicicleta/{id}")
+    ResponseEntity bicicleta(@PathVariable Long id);
 
-	@PostMapping(path="/bicicletas")
-	ResponseEntity saveBicicletas(@RequestBody Bicicleta bicicleta);
+    @PostMapping(path = "/bicicleta")
+    ResponseEntity saveBicicleta(@RequestBody Bicicleta bicicleta);
+
+    @DeleteMapping(path = "/bicicleta/{id}")
+    ResponseEntity deleteBicicleta(@PathVariable Long id);
+
+    @PutMapping(path = "bicicleta/{id}")
+    ResponseEntity updateBicicleta(@PathVariable Long id, @RequestBody Bicicleta bicicleta);
 }

@@ -1,6 +1,6 @@
 package com.br.bikeshop.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -19,7 +19,7 @@ public class Marca implements Serializable {
     @Column(name = "nome")
     private String nome;
 
-    @JsonIgnore
+    @JsonBackReference
     @OneToMany(mappedBy = "marca", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Bicicleta> bicicletas;
 
