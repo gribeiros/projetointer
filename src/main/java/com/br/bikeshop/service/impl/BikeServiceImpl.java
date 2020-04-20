@@ -34,13 +34,10 @@ public class BikeServiceImpl implements BikeService {
 
     @Override
     @Transactional
-    public HttpStatus saveBiciclieta(Bicicleta bicicleta) {
-        bicicletaRepository.save(bicicleta);
+    public ResponseEntity saveBiciclieta(Bicicleta bicicleta) {
+            bicicletaRepository.save(bicicleta);
+            return new ResponseEntity(bicicleta, HttpStatus.CREATED);
 
-        if (bicicletaRepository.findById(bicicleta.getId()) == null) {
-            return HttpStatus.I_AM_A_TEAPOT;
-        }
-        return HttpStatus.CREATED;
     }
 
     @Override
@@ -64,8 +61,8 @@ public class BikeServiceImpl implements BikeService {
     }
 
     @Override
-    public ResponseEntity updateBicicleta(Long id, Bicicleta bicicleta) {
-        if (bicicletaRepository.findById(id) == null) {
+    public ResponseEntity updateBicicleta(Bicicleta bicicleta) {
+        if (bicicletaRepository.findById(bicicleta.getId()) == null) {
             return new ResponseEntity("Bicicleta não existe", HttpStatus.NOT_FOUND);
         }
         bicicletaRepository.save(bicicleta);

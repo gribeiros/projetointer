@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 8.0.19, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.29, for Linux (x86_64)
 --
 -- Host: localhost    Database: prjibike
 -- ------------------------------------------------------
--- Server version	8.0.19
+-- Server version	5.7.29-0ubuntu0.18.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,20 +21,20 @@
 
 DROP TABLE IF EXISTS `bicicleta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `bicicleta` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `id_cor` int DEFAULT NULL,
-  `id_marca` int DEFAULT NULL,
-  `id_modelo` int DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_cor` int(11) NOT NULL,
+  `id_marca` int(11) NOT NULL,
+  `id_modelo` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `FKh46rsbuti38hw548knf9nmmxd` (`id_cor`),
-  KEY `FK1srvkogoibe0r2owwvph4evq7` (`id_marca`),
-  KEY `FKbwyhidcl1sxy101fa7wjqj4yb` (`id_modelo`),
-  CONSTRAINT `FK1srvkogoibe0r2owwvph4evq7` FOREIGN KEY (`id_marca`) REFERENCES `marca` (`id`),
-  CONSTRAINT `FKbwyhidcl1sxy101fa7wjqj4yb` FOREIGN KEY (`id_modelo`) REFERENCES `modelo` (`id`),
-  CONSTRAINT `FKh46rsbuti38hw548knf9nmmxd` FOREIGN KEY (`id_cor`) REFERENCES `cor` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `id_cor` (`id_cor`),
+  KEY `id_marca` (`id_marca`),
+  KEY `id_modelo` (`id_modelo`),
+  CONSTRAINT `bicicleta_ibfk_1` FOREIGN KEY (`id_cor`) REFERENCES `cor` (`id`),
+  CONSTRAINT `bicicleta_ibfk_2` FOREIGN KEY (`id_marca`) REFERENCES `marca` (`id`),
+  CONSTRAINT `bicicleta_ibfk_3` FOREIGN KEY (`id_modelo`) REFERENCES `modelo` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,6 @@ CREATE TABLE `bicicleta` (
 
 LOCK TABLES `bicicleta` WRITE;
 /*!40000 ALTER TABLE `bicicleta` DISABLE KEYS */;
-INSERT INTO `bicicleta` VALUES (1,1,1,1),(2,2,2,2),(3,3,3,3),(4,4,4,4);
 /*!40000 ALTER TABLE `bicicleta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,12 +52,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `cor`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cor` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(255) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,30 +66,7 @@ CREATE TABLE `cor` (
 
 LOCK TABLES `cor` WRITE;
 /*!40000 ALTER TABLE `cor` DISABLE KEYS */;
-INSERT INTO `cor` VALUES (1,'Cor1'),(2,'Cor2'),(3,'Cor3'),(4,'Cor4');
 /*!40000 ALTER TABLE `cor` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `hibernate_sequence`
---
-
-DROP TABLE IF EXISTS `hibernate_sequence`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `hibernate_sequence` (
-  `next_val` bigint DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `hibernate_sequence`
---
-
-LOCK TABLES `hibernate_sequence` WRITE;
-/*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
-INSERT INTO `hibernate_sequence` VALUES (1);
-/*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -99,12 +75,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `marca`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `marca` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(255) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -113,7 +89,6 @@ CREATE TABLE `marca` (
 
 LOCK TABLES `marca` WRITE;
 /*!40000 ALTER TABLE `marca` DISABLE KEYS */;
-INSERT INTO `marca` VALUES (1,'Marca1'),(2,'Marca2'),(3,'Marca3'),(4,'Marca4');
 /*!40000 ALTER TABLE `marca` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,12 +98,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `modelo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `modelo` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(255) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -137,7 +112,6 @@ CREATE TABLE `modelo` (
 
 LOCK TABLES `modelo` WRITE;
 /*!40000 ALTER TABLE `modelo` DISABLE KEYS */;
-INSERT INTO `modelo` VALUES (1,'Modelo1'),(2,'Modelo2'),(3,'Modelo3'),(4,'Modelo4');
 /*!40000 ALTER TABLE `modelo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -154,4 +128,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-18 16:34:06
+-- Dump completed on 2020-04-20 16:24:07

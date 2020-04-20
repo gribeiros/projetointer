@@ -31,19 +31,19 @@ public class BikeControllerImpl implements BikeController {
 
     @Override
     public ResponseEntity saveBicicleta(Bicicleta bicicleta) {
-        HttpStatus httpStatus = bikeService.saveBiciclieta(bicicleta);
-        return new ResponseEntity(bicicleta, httpStatus);
+        ResponseEntity responseEntity = bikeService.saveBiciclieta(bicicleta);
+        return responseEntity;
     }
 
     @Override
     public ResponseEntity deleteBicicleta(Long id) {
         ResponseEntity responseEntity = bikeService.deleteBiciclieta(id);
-        return  responseEntity;
+        return responseEntity;
     }
 
     @Override
-    public ResponseEntity updateBicicleta(Long id,Bicicleta bicicleta) {
-        bikeService.updateBicicleta(id,bicicleta);
+    public ResponseEntity updateBicicleta(Bicicleta bicicleta) {
+        bikeService.updateBicicleta(bicicleta);
         return null;
     }
 

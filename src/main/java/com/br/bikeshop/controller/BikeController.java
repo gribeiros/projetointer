@@ -20,6 +20,6 @@ public interface BikeController {
     @DeleteMapping(path = "/bicicleta/{id}")
     ResponseEntity deleteBicicleta(@PathVariable Long id);
 
-    @PutMapping(path = "bicicleta/{id}")
-    ResponseEntity updateBicicleta(@PathVariable Long id, @RequestBody Bicicleta bicicleta);
+    @PutMapping(path = "bicicleta")
+    ResponseEntity updateBicicleta(@RequestBody Bicicleta bicicleta);
 }

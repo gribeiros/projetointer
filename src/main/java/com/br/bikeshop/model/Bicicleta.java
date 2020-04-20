@@ -13,7 +13,7 @@ public class Bicicleta implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -30,16 +30,6 @@ public class Bicicleta implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_modelo")
     private Modelo modelo;
-
-    public Bicicleta() {
-    }
-
-    public Bicicleta(Long id, Marca marca, Cor cor, Modelo modelo) {
-        this.id = id;
-        this.marca = marca;
-        this.cor = cor;
-        this.modelo = modelo;
-    }
 
     public Long getId() {
         return id;
