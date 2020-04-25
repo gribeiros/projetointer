@@ -3,20 +3,22 @@ package com.br.bikeshop.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
-import java.io.Serializable;
+import javax.validation.constraints.NotNull;
 import java.util.List;
+import java.util.Objects;
 
 @Entity(name = "Marca")
 @Table(name = "marca")
-public class Marca implements Serializable {
+public class Marca   {
 
-    private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue( strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", updatable = false, nullable = false)
     private long id;
 
-    @Column(name = "nome")
+    @Column(name = "nome",unique = true,length = 20)
+    @NotNull(message = "Nome not null")
     private String nome;
 
     @JsonBackReference
@@ -47,4 +49,16 @@ public class Marca implements Serializable {
         this.bicicletas = bicicletas;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Marca)) return false;
+        Marca marca = (Marca) o;
+        return getId() == marca.getId();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
 }

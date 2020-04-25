@@ -10,12 +10,12 @@ public interface BikeService {
 
     List<Bicicleta> returnBicicletas();
 
-    ResponseEntity saveBiciclieta(Bicicleta bicicleta);
+    ResponseEntity saveBiciclieta(Long marca, Long cor, Long modelo);
 
     Optional<Bicicleta> findBiciclieta(Long id);
 
     ResponseEntity deleteBiciclieta(Long id);
 
-    ResponseEntity updateBicicleta(Bicicleta bicicleta);
+    ResponseEntity updateBicicleta(Long id, Long marca, Long cor, Long modelo);
 
 }

@@ -2,6 +2,9 @@ package com.br.bikeshop.service.impl;
 
 import com.br.bikeshop.model.Bicicleta;
 import com.br.bikeshop.repository.BicicletaRepository;
+import com.br.bikeshop.repository.CorRepository;
+import com.br.bikeshop.repository.MarcaRepository;
+import com.br.bikeshop.repository.ModeloRepository;
 import com.br.bikeshop.service.BikeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +19,6 @@ import java.util.Optional;
 
 
 @Service
-@Transactional
 public class BikeServiceImpl implements BikeService {
 
     private static final Logger log = LoggerFactory.getLogger(BikeServiceImpl.class);
@@ -24,6 +26,14 @@ public class BikeServiceImpl implements BikeService {
     @Autowired
     private BicicletaRepository bicicletaRepository;
 
+    @Autowired
+    private MarcaRepository marcaRepository;
+
+    @Autowired
+    private CorRepository corRepository;
+
+    @Autowired
+    private ModeloRepository modeloRepository;
 
     @Override
     @Transactional(readOnly = true)
@@ -34,11 +44,12 @@ public class BikeServiceImpl implements BikeService {
 
     @Override
     @Transactional
-    public ResponseEntity saveBiciclieta(Bicicleta bicicleta) {
-            bicicletaRepository.save(bicicleta);
-            return new ResponseEntity(bicicleta, HttpStatus.CREATED);
-
+    public ResponseEntity saveBiciclieta(Long marca, Long cor, Long modelo) {
+        Bicicleta bicicleta = new Bicicleta(marcaRepository.findById(marca).get(), corRepository.findById(cor).get(), modeloRepository.findById(modelo).get());
+        bicicletaRepository.save(bicicleta);
+        return new ResponseEntity(bicicleta, HttpStatus.OK);
     }
+
 
     @Override
     @Transactional(readOnly = true)
@@ -50,6 +61,7 @@ public class BikeServiceImpl implements BikeService {
     }
 
     @Override
+    @Transactional
     public ResponseEntity deleteBiciclieta(Long id) {
 
         if (bicicletaRepository.findById(id) == null) {
@@ -61,12 +73,11 @@ public class BikeServiceImpl implements BikeService {
     }
 
     @Override
-    public ResponseEntity updateBicicleta(Bicicleta bicicleta) {
-        if (bicicletaRepository.findById(bicicleta.getId()) == null) {
-            return new ResponseEntity("Bicicleta não existe", HttpStatus.NOT_FOUND);
-        }
+    public ResponseEntity updateBicicleta(Long id, Long marca, Long cor, Long modelo) {
+        Bicicleta bicicleta = new Bicicleta(marcaRepository.findById(marca).get(), corRepository.findById(cor).get(), modeloRepository.findById(modelo).get());
+        bicicleta.setId(id);
         bicicletaRepository.save(bicicleta);
-        return new ResponseEntity("Bicicleta atualizada", HttpStatus.OK);
+        return new ResponseEntity("Bicileta atualizada", HttpStatus.OK);
     }
 
 

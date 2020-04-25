@@ -1,25 +1,25 @@
 package com.br.bikeshop.controller;
 
-import com.br.bikeshop.model.Bicicleta;
+import com.br.bikeshop.util.BicicletaSaveAndUpdate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @ResponseBody
-@RequestMapping(path = "/")
+@RequestMapping(path = "/bicicleta")
 public interface BikeController {
 
-    @GetMapping(path = "/bicicletas")
+    @GetMapping(path = "")
     ResponseEntity bicicletas();
 
-    @GetMapping(path = "/bicicleta/{id}")
+    @GetMapping(path = "/{id}")
     ResponseEntity bicicleta(@PathVariable Long id);
 
-    @PostMapping(path = "/bicicleta")
-    ResponseEntity saveBicicleta(@RequestBody Bicicleta bicicleta);
+    @PostMapping(path = "")
+    ResponseEntity saveBicicleta(@RequestBody BicicletaSaveAndUpdate bicicletaSaveAndUpdate);
 
-    @DeleteMapping(path = "/bicicleta/{id}")
+    @DeleteMapping(path = "/{id}")
     ResponseEntity deleteBicicleta(@PathVariable Long id);
 
-    @PutMapping(path = "bicicleta")
-    ResponseEntity updateBicicleta(@RequestBody Bicicleta bicicleta);
+    @PutMapping(path = "/{id}")
+    ResponseEntity updateBicicleta(@PathVariable Long id, @RequestBody BicicletaSaveAndUpdate bicicletaSaveAndUpdate);
 }

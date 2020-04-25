@@ -3,6 +3,7 @@ package com.br.bikeshop.controller.impl;
 import com.br.bikeshop.controller.BikeController;
 import com.br.bikeshop.model.Bicicleta;
 import com.br.bikeshop.service.BikeService;
+import com.br.bikeshop.util.BicicletaSaveAndUpdate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,10 +31,11 @@ public class BikeControllerImpl implements BikeController {
     }
 
     @Override
-    public ResponseEntity saveBicicleta(Bicicleta bicicleta) {
-        ResponseEntity responseEntity = bikeService.saveBiciclieta(bicicleta);
+    public ResponseEntity saveBicicleta(BicicletaSaveAndUpdate bicicletaSaveAndUpdate) {
+        ResponseEntity responseEntity = bikeService.saveBiciclieta(bicicletaSaveAndUpdate.getMarca(), bicicletaSaveAndUpdate.getCor(), bicicletaSaveAndUpdate.getModelo());
         return responseEntity;
     }
+
 
     @Override
     public ResponseEntity deleteBicicleta(Long id) {
@@ -42,9 +44,9 @@ public class BikeControllerImpl implements BikeController {
     }
 
     @Override
-    public ResponseEntity updateBicicleta(Bicicleta bicicleta) {
-        bikeService.updateBicicleta(bicicleta);
-        return null;
+    public ResponseEntity updateBicicleta(Long id, BicicletaSaveAndUpdate bicicletaSaveAndUpdate) {
+        ResponseEntity responseEntity = bikeService.updateBicicleta(id, bicicletaSaveAndUpdate.getMarca(), bicicletaSaveAndUpdate.getCor(), bicicletaSaveAndUpdate.getModelo());
+        return responseEntity;
     }
 
 

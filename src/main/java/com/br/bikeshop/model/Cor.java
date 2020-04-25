@@ -3,20 +3,21 @@ package com.br.bikeshop.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
-import java.io.Serializable;
+import javax.validation.constraints.NotNull;
 import java.util.List;
+import java.util.Objects;
 
 @Entity(name = "Cor")
 @Table(name = "cor")
-public class Cor implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class Cor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", updatable = false, nullable = false)
     private long id;
 
-    @Column(name = "nome")
+    @Column(name = "nome",unique = true,length = 20)
+    @NotNull(message = "Nome not null")
     private String nome;
 
     @JsonBackReference
@@ -47,5 +48,16 @@ public class Cor implements Serializable {
         this.bicicletas = bicicletas;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Cor)) return false;
+        Cor cor = (Cor) o;
+        return getId() == cor.getId();
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
 }
