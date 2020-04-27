@@ -12,7 +12,7 @@ import java.util.Objects;
 public class Cor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "nome",unique = true,length = 20)
