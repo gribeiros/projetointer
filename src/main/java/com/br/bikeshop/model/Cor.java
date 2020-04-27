@@ -13,7 +13,6 @@ public class Cor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", updatable = false, nullable = false)
     private long id;
 
     @Column(name = "nome",unique = true,length = 20)

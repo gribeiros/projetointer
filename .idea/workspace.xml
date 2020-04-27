@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="437f5c6d-38e0-4572-8c0a-7c5dd727296e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Bicicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Bicicleta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Cor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Cor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Marca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Marca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Modelo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,14 +108,22 @@
       <option name="project" value="LOCAL" />
       <updated>1587306205310</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Corrigido erro de geração de id.">
+      <created>1587947078377</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587947078377</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Corrigido models" />
     <MESSAGE value="Atualização da query." />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualização da query." />
+    <MESSAGE value="Corrigido erro de geração de id." />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrigido erro de geração de id." />
   </component>
   <component name="WindowStateProjectService">
     <state x="726" y="224" key="#Auto_Import" timestamp="1587826464529">
@@ -161,10 +172,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587271050240" />
-    <state x="570" y="88" key="CommitChangelistDialog2" timestamp="1587306204033">
+    <state x="570" y="88" key="CommitChangelistDialog2" timestamp="1587947076981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="570" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587306204033" />
+    <state x="570" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587947076981" />
     <state x="694" y="281" key="EnvironmentVariablesDialog" timestamp="1586035387609">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -223,10 +234,10 @@
     </state>
     <state x="204" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587240956569" />
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1584644845150" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587306217738">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587947094574">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587306217738" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587947094574" />
     <state x="451" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1586033752472">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
