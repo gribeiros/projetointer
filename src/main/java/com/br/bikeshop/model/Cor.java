@@ -13,9 +13,10 @@ public class Cor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", updatable = false, nullable = false)
     private long id;
 
-    @Column(name = "nome",unique = true,length = 20)
+    @Column(name = "nome",unique = true,length = 30)
     @NotNull(message = "Nome not null")
     private String nome;
 
