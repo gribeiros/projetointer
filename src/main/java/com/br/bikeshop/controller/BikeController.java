@@ -1,6 +1,6 @@
 package com.br.bikeshop.controller;
 
-import com.br.bikeshop.util.BicicletaSaveAndUpdate;
+import com.br.bikeshop.view.BicicletaSaveAndUpdate;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.ResponseEntity;

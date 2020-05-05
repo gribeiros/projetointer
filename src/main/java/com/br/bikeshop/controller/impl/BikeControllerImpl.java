@@ -3,7 +3,7 @@ package com.br.bikeshop.controller.impl;
 import com.br.bikeshop.controller.BikeController;
 import com.br.bikeshop.model.Bicicleta;
 import com.br.bikeshop.service.BikeService;
-import com.br.bikeshop.util.BicicletaSaveAndUpdate;
+import com.br.bikeshop.view.BicicletaSaveAndUpdate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

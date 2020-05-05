@@ -1,4 +1,4 @@
-package com.br.bikeshop.util;
+package com.br.bikeshop.view;
 
 
 public class BicicletaSaveAndUpdate {
