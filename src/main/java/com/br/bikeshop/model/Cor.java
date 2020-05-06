@@ -3,7 +3,7 @@ package com.br.bikeshop.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public class Cor {
     private long id;
 
     @Column(name = "nome",unique = true,length = 30)
-    @NotNull(message = "Nome not null")
+    @NotBlank(message = "Nome not null")
     private String nome;
 
     @JsonBackReference
