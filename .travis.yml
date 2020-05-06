@@ -5,7 +5,7 @@
     before_install:
       - chmod +x mvnw
       - sudo apt-get update
-      - sudo apt install ruby-dev libffi-dev make gcc
+      - sudo apt install ruby ruby-dev
       - sudo gem install travis
     script:
       - travis encrypt 5ade8704-ce2c-4ce7-bdf3-07cf6d460fd6 --add deploy.api_key --pro
