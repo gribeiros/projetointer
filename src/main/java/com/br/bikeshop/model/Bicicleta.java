@@ -21,17 +21,17 @@ public class Bicicleta implements Serializable {
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_marca")
+    @JoinColumn(name = "id_marca", nullable = false)
     private Marca marca;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_cor")
+    @JoinColumn(name = "id_cor", nullable = false)
     private Cor cor;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_modelo")
+    @JoinColumn(name = "id_modelo", nullable = false)
     private Modelo modelo;
 
     @JsonBackReference

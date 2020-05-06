@@ -19,7 +19,7 @@ public class Aluguel {
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_usuario")
+    @JoinColumn(name = "id_usuario", nullable = false)
     private Usuario usuario;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -34,7 +34,7 @@ public class Aluguel {
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_metodoDePagamento", nullable = false)
+    @JoinColumn(name = "id_metodo_de_pagamento", nullable = false)
     private MetodoDePagamento metodoDePagamento;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
