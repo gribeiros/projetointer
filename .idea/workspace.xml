@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="437f5c6d-38e0-4572-8c0a-7c5dd727296e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/HomeControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Aluguel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/MetodoDePagamento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Bicicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Bicicleta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Multa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Multa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,13 +34,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1YocQjEgdMHx5HO1Ddrw5OE3wOG" />
   <component name="ProjectLevelVcsManager">
@@ -147,10 +145,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="224" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586035384413" />
-    <state x="524" y="115" width="544" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1588709534750">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="675" y="124" width="544" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1588801987558">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="675" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587834671568" />
+    <state x="675" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588801987558" />
     <state x="524" y="115" width="544" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1588709534750" />
     <state x="614" y="318" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587401594818">
       <screen x="67" y="27" width="1299" height="741" />
@@ -239,10 +237,10 @@
     </state>
     <state x="204" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587240956569" />
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1584644845150" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587947094574">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588800352552">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587947094574" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588800352552" />
     <state x="451" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1586033752472">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -253,10 +251,18 @@
     </state>
     <state x="-99" y="0" width="1150" height="1040" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587845159591" />
     <state x="0" y="27" width="778" height="741" key="find.popup/67.27.1299.741@67.27.1299.741" timestamp="1584140849872" />
+    <state x="704" y="419" key="git4idea.ui.GitStashDialog" timestamp="1588800369938">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="704" y="419" key="git4idea.ui.GitStashDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588800369938" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1587271353385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587271353385" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588801214894">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588801214894" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

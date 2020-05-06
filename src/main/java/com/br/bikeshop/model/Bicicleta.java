@@ -1,6 +1,7 @@
 package com.br.bikeshop.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -32,6 +33,10 @@ public class Bicicleta implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_modelo")
     private Modelo modelo;
+
+    @JsonBackReference
+    @OneToOne(mappedBy = "bicicleta", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Aluguel aluguel;
 
     public Bicicleta() {
     }
