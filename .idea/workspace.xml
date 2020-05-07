@@ -2,29 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="437f5c6d-38e0-4572-8c0a-7c5dd727296e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/AluguelRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/MetodoDePagamentoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/MultaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/PessoaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/StatusRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/UsuarioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/AluguelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/MetodoDePagamentoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/MultaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/PessoaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/StatusService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/UsuarioService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/AluguelServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/MetodoDePagamentoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/MultaServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/PessoaServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/StatusServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/UsuarioServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/AluguelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/MetodoDePagamentoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/MultaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/PessoaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/StatusController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/UsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/AluguelControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/MetodoDePagamentoControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/MultaControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/PessoaControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/StatusControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/UsuarioControllerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/BikeControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/BikeControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/BikeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/BicicletaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/BikeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/BicicletaServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/view/BicicletaView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/BikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/BicicletaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/BikeControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/BicicletaControllerImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,11 +174,11 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="469" y="278" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/67.27.1299.741@67.27.1299.741" timestamp="1583887867361" />
-    <state x="181" y="27" width="1175" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588858089673">
+    <state x="181" y="27" width="1175" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588875923196">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="697" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587834803742" />
-    <state x="181" y="27" width="1175" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1299.741@67.27.1299.741" timestamp="1588858089673" />
+    <state x="181" y="27" width="1175" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1299.741@67.27.1299.741" timestamp="1588875923196" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586055734693">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

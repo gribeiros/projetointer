@@ -1,6 +1,6 @@
 package com.br.bikeshop.controller.impl;
 
-import com.br.bikeshop.controller.BikeController;
+import com.br.bikeshop.controller.BicicletaController;
 import com.br.bikeshop.model.Bicicleta;
 import com.br.bikeshop.service.BicicletaService;
 import com.br.bikeshop.view.BicicletaSaveAndUpdate;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Controller;
 import java.util.Optional;
 
 @Controller
-public class BikeControllerImpl implements BikeController {
+public class BicicletaControllerImpl implements BicicletaController {
 
     @Autowired
     private BicicletaService bicicletaService;
