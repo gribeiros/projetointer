@@ -2,7 +2,7 @@ package com.br.bikeshop.controller.impl;
 
 import com.br.bikeshop.controller.BikeController;
 import com.br.bikeshop.model.Bicicleta;
-import com.br.bikeshop.service.BikeService;
+import com.br.bikeshop.service.BicicletaService;
 import com.br.bikeshop.view.BicicletaSaveAndUpdate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,37 +15,37 @@ import java.util.Optional;
 public class BikeControllerImpl implements BikeController {
 
     @Autowired
-    private BikeService bikeService;
+    private BicicletaService bicicletaService;
 
 
     @Override
     public ResponseEntity bicicletas() {
 
-        return new ResponseEntity(bikeService.returnBicicletas(), HttpStatus.OK);
+        return new ResponseEntity(bicicletaService.returnBicicletas(), HttpStatus.OK);
     }
 
     @Override
     public ResponseEntity bicicleta(Long id) {
-        Optional<Bicicleta> bicicleta = bikeService.findBiciclieta(id);
+        Optional<Bicicleta> bicicleta = bicicletaService.findBiciclieta(id);
         return new ResponseEntity(bicicleta, HttpStatus.OK);
     }
 
     @Override
     public ResponseEntity saveBicicleta(BicicletaSaveAndUpdate bicicletaSaveAndUpdate) {
-        ResponseEntity responseEntity = bikeService.saveBiciclieta(bicicletaSaveAndUpdate.getMarca(), bicicletaSaveAndUpdate.getCor(), bicicletaSaveAndUpdate.getModelo());
+        ResponseEntity responseEntity = bicicletaService.saveBiciclieta(bicicletaSaveAndUpdate.getMarca(), bicicletaSaveAndUpdate.getCor(), bicicletaSaveAndUpdate.getModelo());
         return responseEntity;
     }
 
 
     @Override
     public ResponseEntity deleteBicicleta(Long id) {
-        ResponseEntity responseEntity = bikeService.deleteBiciclieta(id);
+        ResponseEntity responseEntity = bicicletaService.deleteBiciclieta(id);
         return responseEntity;
     }
 
     @Override
     public ResponseEntity updateBicicleta(Long id, BicicletaSaveAndUpdate bicicletaSaveAndUpdate) {
-        ResponseEntity responseEntity = bikeService.updateBicicleta(id, bicicletaSaveAndUpdate.getMarca(), bicicletaSaveAndUpdate.getCor(), bicicletaSaveAndUpdate.getModelo());
+        ResponseEntity responseEntity = bicicletaService.updateBicicleta(id, bicicletaSaveAndUpdate.getMarca(), bicicletaSaveAndUpdate.getCor(), bicicletaSaveAndUpdate.getModelo());
         return responseEntity;
     }
 

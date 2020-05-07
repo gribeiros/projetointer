@@ -5,7 +5,7 @@ import com.br.bikeshop.repository.BicicletaRepository;
 import com.br.bikeshop.repository.CorRepository;
 import com.br.bikeshop.repository.MarcaRepository;
 import com.br.bikeshop.repository.ModeloRepository;
-import com.br.bikeshop.service.BikeService;
+import com.br.bikeshop.service.BicicletaService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +19,9 @@ import java.util.Optional;
 
 
 @Service
-public class BikeServiceImpl implements BikeService {
+public class BicicletaServiceImpl implements BicicletaService {
 
-    private static final Logger log = LoggerFactory.getLogger(BikeServiceImpl.class);
+    private static final Logger log = LoggerFactory.getLogger(BicicletaServiceImpl.class);
 
     @Autowired
     private BicicletaRepository bicicletaRepository;
@@ -73,6 +73,7 @@ public class BikeServiceImpl implements BikeService {
     }
 
     @Override
+    @Transactional
     public ResponseEntity updateBicicleta(Long id, Long marca, Long cor, Long modelo) {
         Bicicleta bicicleta = new Bicicleta(marcaRepository.findById(marca).get(), corRepository.findById(cor).get(), modeloRepository.findById(modelo).get());
         bicicleta.setId(id);
