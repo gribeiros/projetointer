@@ -8,11 +8,7 @@ import java.util.Optional;
 
 public interface MetodoDePagamentoService {
 
-<<<<<<< HEAD
     List<MetodoDePagamento> returnMetodosDePagamentos();
-=======
-    List<MetodoDePagamento> returnMetodoDePagamentos();
->>>>>>> d1c752dd58611b8e8156c656067100007a34251c
 
     ResponseEntity saveMetodoDePagamento(MetodoDePagamento metodoDePagamento);
 
@@ -21,8 +17,5 @@ public interface MetodoDePagamentoService {
     ResponseEntity deleteMetodoDePagamento(Long id);
 
     ResponseEntity updateMetodoDePagamento(MetodoDePagamento metodoDePagamento);
-<<<<<<< HEAD
 
-=======
->>>>>>> d1c752dd58611b8e8156c656067100007a34251c
 }
