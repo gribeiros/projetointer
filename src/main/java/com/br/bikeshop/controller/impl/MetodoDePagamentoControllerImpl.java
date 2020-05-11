@@ -8,9 +8,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 
+
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
 
 @Controller
 public class MetodoDePagamentoControllerImpl implements MetodoDePagamentoController {
@@ -19,16 +21,16 @@ public class MetodoDePagamentoControllerImpl implements MetodoDePagamentoControl
     MetodoDePagamentoService metodoDePagamentoService;
 
     @Override
-    public ResponseEntity MmtodoDePagamentos() {
+    public ResponseEntity metodosDePagamentos() {
         List<MetodoDePagamento> metodoDePagamentos = metodoDePagamentoService.returnMetodosDePagamentos();
         return new ResponseEntity(metodoDePagamentos.stream().sorted((o1, o2) -> (int) (o1.getId() - o1.getId())).collect(Collectors.toList()), HttpStatus.OK);
+
     }
 
     @Override
     public ResponseEntity metodoDePagamento(Long id) {
         Optional<MetodoDePagamento> metodoDePagamento = metodoDePagamentoService.findMetodoDePagamento(id);
         return new ResponseEntity(metodoDePagamento, HttpStatus.OK);
-
     }
 
     @Override
@@ -38,7 +40,9 @@ public class MetodoDePagamentoControllerImpl implements MetodoDePagamentoControl
     }
 
     @Override
+
     public ResponseEntity deleteMetodoDePagamento(Long id) {
+
         ResponseEntity responseEntity = metodoDePagamentoService.deleteMetodoDePagamento(id);
         return responseEntity;
     }
@@ -46,6 +50,8 @@ public class MetodoDePagamentoControllerImpl implements MetodoDePagamentoControl
     @Override
     public ResponseEntity updateMetodoDePagamento(MetodoDePagamento metodoDePagamento) {
         ResponseEntity responseEntity = metodoDePagamentoService.updateMetodoDePagamento(metodoDePagamento);
-        return null;
+
+        return responseEntity;
+
     }
 }

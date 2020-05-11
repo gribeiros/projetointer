@@ -12,25 +12,24 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(value = "*")
 public interface MetodoDePagamentoController {
 
-
     @GetMapping(path = "")
-    @ApiOperation(value = "Retorna uma lista de Metodo De Pagamentos")
-    ResponseEntity MmtodoDePagamentos();
+    @ApiOperation(value = "Retorna uma lista dod metodos de pagamento")
+    ResponseEntity metodosDePagamentos();
 
     @GetMapping(path = "/{id}")
-    @ApiOperation(value = "Retorna uma Metodo De Pagamento por ID")
+    @ApiOperation(value = "Retorna o metodo de pagamento por id")
     ResponseEntity metodoDePagamento(@PathVariable Long id);
 
     @PostMapping(path = "")
-    @ApiOperation(value = "Salva um novo Metodo De Pagamento")
+    @ApiOperation(value = "Salva um novo metodo de pagamento")
     ResponseEntity saveMetodoDePagamento(@RequestBody MetodoDePagamento metodoDePagamento);
 
     @DeleteMapping(path = "/{id}")
-    @ApiOperation(value = "Deleta um Metodo De Pagamento por ID")
+    @ApiOperation(value = "Deleta metodo de pagamento por id")
     ResponseEntity deleteMetodoDePagamento(@PathVariable Long id);
 
     @PutMapping(path = "")
-    @ApiOperation(value = "Atualiza um Metodo De Pagamento por ID")
+    @ApiOperation(value = "Atualiza metodo de pagamento por ID")
     ResponseEntity updateMetodoDePagamento(@RequestBody MetodoDePagamento metodoDePagamento);
 
 }

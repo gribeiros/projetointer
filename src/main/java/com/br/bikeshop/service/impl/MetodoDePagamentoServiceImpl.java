@@ -12,6 +12,10 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
 @Service
 public class MetodoDePagamentoServiceImpl implements MetodoDePagamentoService {
 
@@ -19,6 +23,7 @@ public class MetodoDePagamentoServiceImpl implements MetodoDePagamentoService {
     MetodoDePagamentoRepository metodoDePagamentoRepository;
 
     @Override
+<<<<<<< HEAD
     @Transactional(readOnly = true)
     public List<MetodoDePagamento> returnMetodosDePagamentos() {
         List<MetodoDePagamento> metodoDePagamentos = metodoDePagamentoRepository.findAll();
@@ -28,12 +33,20 @@ public class MetodoDePagamentoServiceImpl implements MetodoDePagamentoService {
 
     @Override
     @Transactional
+=======
+    public List<MetodoDePagamento> returnMetodoDePagamentos() {
+        return metodoDePagamentoRepository.findAll().stream().sorted((o1, o2) -> (int) (o1.getId() - o2.getId())).collect(Collectors.toList());
+    }
+
+    @Override
+>>>>>>> d1c752dd58611b8e8156c656067100007a34251c
     public ResponseEntity saveMetodoDePagamento(MetodoDePagamento metodoDePagamento) {
         metodoDePagamentoRepository.save(metodoDePagamento);
         return new ResponseEntity(metodoDePagamento, HttpStatus.OK);
     }
 
     @Override
+<<<<<<< HEAD
     @Transactional(readOnly = true)
     public Optional<MetodoDePagamento> findMetodoDePagamento(Long id) {
         Optional<MetodoDePagamento> metodoDePagamento = metodoDePagamentoRepository.findById(id);
@@ -52,5 +65,21 @@ public class MetodoDePagamentoServiceImpl implements MetodoDePagamentoService {
     public ResponseEntity updateMetodoDePagamento(MetodoDePagamento metodoDePagamento) {
         metodoDePagamentoRepository.save(metodoDePagamento);
         return new ResponseEntity("Metodo de pagamento Atualizado", HttpStatus.OK);
+=======
+    public Optional<MetodoDePagamento> findMetodoDePagamento(Long id) {
+        return metodoDePagamentoRepository.findById(id);
+    }
+
+    @Override
+    public ResponseEntity deleteMetodoDePagamento(Long id) {
+        metodoDePagamentoRepository.deleteById(id);
+        return new ResponseEntity("Deletado", HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity updateMetodoDePagamento(MetodoDePagamento metodoDePagamento) {
+        metodoDePagamentoRepository.saveAndFlush(metodoDePagamento);
+        return new ResponseEntity("Atualizado", HttpStatus.OK);
+>>>>>>> d1c752dd58611b8e8156c656067100007a34251c
     }
 }
