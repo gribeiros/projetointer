@@ -23,7 +23,7 @@ public class MetodoDePagamentoControllerImpl implements MetodoDePagamentoControl
     @Override
     public ResponseEntity metodosDePagamentos() {
         List<MetodoDePagamento> metodoDePagamentos = metodoDePagamentoService.returnMetodosDePagamentos();
-        return new ResponseEntity(metodoDePagamentos.stream().sorted((o1, o2) -> (int) (o1.getId() - o1.getId())).collect(Collectors.toList()), HttpStatus.OK);
+        return new ResponseEntity(metodoDePagamentos.stream().sorted((o1, o2) -> (int) (o1.getId() - o2.getId())).collect(Collectors.toList()), HttpStatus.OK);
 
     }
 
