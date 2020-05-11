@@ -21,7 +21,7 @@ public class MarcaControllerImpl implements MarcaController {
     public ResponseEntity marcas() {
         List<Marca> marcas = marcaService.returnMarcas();
 
-        return new ResponseEntity(marcas, HttpStatus.OK);
+        return new ResponseEntity(marcas.stream().sorted((o1, o2) -> (int) (o1.getId() - o1.getId())), HttpStatus.OK);
     }
 
     @Override

@@ -10,4 +10,5 @@ public class AluguelServiceImpl implements AluguelService {
 
     @Autowired
     AluguelRepository aluguelRepository;
+    
 }

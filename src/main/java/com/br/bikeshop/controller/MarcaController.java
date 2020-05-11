@@ -21,7 +21,7 @@ public interface MarcaController {
     ResponseEntity marca(@PathVariable Long id);
 
     @PostMapping(path = "")
-    @ApiOperation(value = "Salava uma nova marca")
+    @ApiOperation(value = "Salva uma nova marca")
     ResponseEntity saveMarca(@RequestBody Marca marca);
 
     @DeleteMapping(path = "/{id}")
