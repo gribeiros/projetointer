@@ -42,4 +42,59 @@ public class Aluguel {
     @JoinColumn(name = "id_bicicleta", nullable = false)
     private Bicicleta bicicleta;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Date getTempo() {
+        return tempo;
+    }
+
+    public void setTempo(Date tempo) {
+        this.tempo = tempo;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public Multa getMulta() {
+        return multa;
+    }
+
+    public void setMulta(Multa multa) {
+        this.multa = multa;
+    }
+
+    public MetodoDePagamento getMetodoDePagamento() {
+        return metodoDePagamento;
+    }
+
+    public void setMetodoDePagamento(MetodoDePagamento metodoDePagamento) {
+        this.metodoDePagamento = metodoDePagamento;
+    }
+
+    public Bicicleta getBicicleta() {
+        return bicicleta;
+    }
+
+    public void setBicicleta(Bicicleta bicicleta) {
+        this.bicicleta = bicicleta;
+    }
 }
