@@ -21,7 +21,7 @@ public class Usuario {
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_pessoa")
+    @JoinColumn(name = "id_pessoa",unique = true)
     private Pessoa pessoa;
 
     @JsonBackReference

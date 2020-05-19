@@ -29,7 +29,7 @@ public class Aluguel {
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_multa", nullable = false)
+    @JoinColumn(name = "id_multa", unique = true)
     private Multa multa;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -42,4 +42,72 @@ public class Aluguel {
     @JoinColumn(name = "id_bicicleta", nullable = false)
     private Bicicleta bicicleta;
 
+    public Aluguel() {
+    }
+
+    public Aluguel(Long id, Date tempo, Usuario usuario, Status status, Multa multa, MetodoDePagamento metodoDePagamento, Bicicleta bicicleta) {
+        this.id = id;
+        this.tempo = tempo;
+        this.usuario = usuario;
+        this.status = status;
+        this.multa = multa;
+        this.metodoDePagamento = metodoDePagamento;
+        this.bicicleta = bicicleta;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Date getTempo() {
+        return tempo;
+    }
+
+    public void setTempo(Date tempo) {
+        this.tempo = tempo;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public Multa getMulta() {
+        return multa;
+    }
+
+    public void setMulta(Multa multa) {
+        this.multa = multa;
+    }
+
+    public MetodoDePagamento getMetodoDePagamento() {
+        return metodoDePagamento;
+    }
+
+    public void setMetodoDePagamento(MetodoDePagamento metodoDePagamento) {
+        this.metodoDePagamento = metodoDePagamento;
+    }
+
+    public Bicicleta getBicicleta() {
+        return bicicleta;
+    }
+
+    public void setBicicleta(Bicicleta bicicleta) {
+        this.bicicleta = bicicleta;
+    }
 }
