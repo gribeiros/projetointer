@@ -21,7 +21,7 @@ public class ModeloControllerImpl implements ModeloController {
     @Override
     public ResponseEntity modelos() {
         List<Modelo> modelos = modeloService.returnModelos();
-        return new ResponseEntity(modelos.stream().sorted((o1, o2) -> (int) (o1.getId() - o1.getId())), HttpStatus.OK);
+        return new ResponseEntity(modelos.stream().sorted((o1, o2) -> (int) (o1.getId() - o2.getId())), HttpStatus.OK);
     }
 
     @Override

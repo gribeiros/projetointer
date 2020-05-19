@@ -19,7 +19,7 @@ public class CorControllerImpl implements CorController {
     @Override
     public ResponseEntity cores() {
 
-        return new ResponseEntity(corService.returnCores().stream().sorted((o1, o2) -> (int) (o1.getId() - o1.getId())), HttpStatus.OK);
+        return new ResponseEntity(corService.returnCores().stream().sorted((o1, o2) -> (int) (o1.getId() - o2.getId())), HttpStatus.OK);
     }
 
     @Override

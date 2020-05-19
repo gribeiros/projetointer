@@ -21,7 +21,7 @@ public class BicicletaControllerImpl implements BicicletaController {
     @Override
     public ResponseEntity bicicletas() {
 
-        return new ResponseEntity(bicicletaService.returnBicicletas().stream().sorted((o1, o2) -> (int) (o1.getId() - o1.getId())), HttpStatus.OK);
+        return new ResponseEntity(bicicletaService.returnBicicletas().stream().sorted((o1, o2) -> (int) (o1.getId() - o2.getId())), HttpStatus.OK);
     }
 
     @Override

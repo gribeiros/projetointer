@@ -42,6 +42,7 @@ public class Aluguel {
     @JoinColumn(name = "id_bicicleta", nullable = false)
     private Bicicleta bicicleta;
 
+<<<<<<< HEAD
     public Aluguel() {
     }
 
@@ -55,6 +56,8 @@ public class Aluguel {
         this.bicicleta = bicicleta;
     }
 
+=======
+>>>>>>> 68ef18cc1df0c0bedd455cdb43a706b1cdb0bb45
     public Long getId() {
         return id;
     }
