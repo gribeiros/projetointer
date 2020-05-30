@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="437f5c6d-38e0-4572-8c0a-7c5dd727296e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/PessoaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/PessoaController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590861339534</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Mapeamento do swagger.">
+      <created>1590862197183</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590862197183</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -137,7 +143,8 @@
     <MESSAGE value="Corrigido erro de geração de id." />
     <MESSAGE value="Erro em merge" />
     <MESSAGE value="Erro na data ." />
-    <option name="LAST_COMMIT_MESSAGE" value="Erro na data ." />
+    <MESSAGE value="Mapeamento do swagger." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mapeamento do swagger." />
   </component>
   <component name="WindowStateProjectService">
     <state x="726" y="224" key="#Auto_Import" timestamp="1587826464529">
@@ -191,10 +198,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587271050240" />
-    <state x="567" y="88" key="CommitChangelistDialog2" timestamp="1590861338515">
+    <state x="567" y="88" key="CommitChangelistDialog2" timestamp="1590862196092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="567" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590861338515" />
+    <state x="567" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590862196092" />
     <state x="694" y="281" key="EnvironmentVariablesDialog" timestamp="1586035387609">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
