@@ -1,7 +1,6 @@
 package com.br.bikeshop.model;
 
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
@@ -37,10 +36,6 @@ public class Pessoa {
     @Column(name = "cpf", length = 14, unique = true)
     @NotBlank(message = "CPF não pode ser nulo")
     private String cpf;
-
-    @JsonBackReference
-    @OneToOne(mappedBy = "pessoa", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private Usuario usuario;
 
     public Long getId() {
         return id;
