@@ -1,6 +1,5 @@
 package com.br.bikeshop.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -23,10 +22,6 @@ public class Usuario {
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_pessoa",unique = true)
     private Pessoa pessoa;
-
-    @JsonBackReference
-    @OneToOne(mappedBy = "usuario", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private Aluguel aluguel;
 
     public Long getId() {
         return id;

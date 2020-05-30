@@ -1,6 +1,5 @@
 package com.br.bikeshop.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
@@ -22,10 +21,6 @@ public class Multa {
     @Column(name = "tempo", nullable = false)
     @JsonFormat(pattern = "dd-MM-yyyy")
     private Date tempo;
-
-    @JsonBackReference
-    @OneToOne(mappedBy = "multa", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private Aluguel aluguel;
 
     public Long getId() {
         return id;

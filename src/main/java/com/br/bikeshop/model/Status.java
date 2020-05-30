@@ -1,7 +1,5 @@
 package com.br.bikeshop.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
@@ -18,9 +16,6 @@ public class Status {
     @NotBlank(message = "Status not null")
     private String status;
 
-    @JsonBackReference
-    @OneToOne(mappedBy = "status", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private Aluguel aluguel;
 
     public Long getId() {
         return id;
