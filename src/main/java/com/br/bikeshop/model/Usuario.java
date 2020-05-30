@@ -9,19 +9,29 @@ import javax.persistence.*;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name ="id",nullable = false,updatable = false)
+    @Column(name = "id", nullable = false, updatable = false)
     private Long id;
 
-    @Column(name = "login",nullable = false,unique = true,length = 10)
+    @Column(name = "login", nullable = false, unique = true, length = 10)
     private String login;
 
-    @Column(name = "senha",nullable = false,length = 10)
+    @Column(name = "senha", nullable = false, length = 10)
     private String senha;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_pessoa",unique = true)
+    @JoinColumn(name = "id_pessoa", unique = true)
     private Pessoa pessoa;
+
+    public Usuario() {
+    }
+
+    public Usuario(String login, String senha, Pessoa pessoa) {
+        this.login = login;
+        this.senha = senha;
+        this.pessoa = pessoa;
+    }
+
 
     public Long getId() {
         return id;
