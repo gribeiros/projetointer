@@ -15,12 +15,12 @@ public class Aluguel {
     private Long id;
 
     @Temporal(TemporalType.DATE)
-    @Column(nullable = false, updatable = false, name = "tempo")
+    @Column(nullable = false, updatable = false, name = "tempo_inicio")
     @JsonFormat(pattern = "dd-MM-yyyy")
     private Date tempo_inicio;
 
     @Temporal(TemporalType.DATE)
-    @Column(nullable = false, updatable = false, name = "tempo")
+    @Column(nullable = false, updatable = false, name = "tempo_final")
     @JsonFormat(pattern = "dd-MM-yyyy")
     private Date tempo_final;
 
