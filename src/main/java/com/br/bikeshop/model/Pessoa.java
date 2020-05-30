@@ -37,6 +37,9 @@ public class Pessoa {
     @NotBlank(message = "CPF não pode ser nulo")
     private String cpf;
 
+    @OneToOne(mappedBy = "pessoa")
+    private Usuario usuario;
+
     public Long getId() {
         return id;
     }
