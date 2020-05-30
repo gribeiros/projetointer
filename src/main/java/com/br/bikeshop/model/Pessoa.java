@@ -2,6 +2,7 @@ package com.br.bikeshop.model;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -22,9 +23,10 @@ public class Pessoa {
 
     @Temporal(TemporalType.DATE)
     @Column(name = "data_nascimento")
+    @JsonFormat(pattern = "dd-MM-yyyy")
     private Date dateNasc;
 
-    @Column(name = "Telefone", length = 13)
+    @Column(name = "Telefone", length = 14)
     @NotBlank(message = "Telefone não pode ser nulo")
     private String telefone;
 

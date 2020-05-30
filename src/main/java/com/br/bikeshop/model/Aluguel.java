@@ -1,5 +1,6 @@
 package com.br.bikeshop.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -15,7 +16,13 @@ public class Aluguel {
 
     @Temporal(TemporalType.DATE)
     @Column(nullable = false, updatable = false, name = "tempo")
-    private Date tempo;
+    @JsonFormat(pattern = "dd-MM-yyyy")
+    private Date tempo_inicio;
+
+    @Temporal(TemporalType.DATE)
+    @Column(nullable = false, updatable = false, name = "tempo")
+    @JsonFormat(pattern = "dd-MM-yyyy")
+    private Date tempo_final;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
@@ -45,9 +52,10 @@ public class Aluguel {
     public Aluguel() {
     }
 
-    public Aluguel(Long id, Date tempo, Usuario usuario, Status status, Multa multa, MetodoDePagamento metodoDePagamento, Bicicleta bicicleta) {
+    public Aluguel(Long id, Date tempo_inicio, Date tempo_final, Usuario usuario, Status status, Multa multa, MetodoDePagamento metodoDePagamento, Bicicleta bicicleta) {
         this.id = id;
-        this.tempo = tempo;
+        this.tempo_inicio = tempo_inicio;
+        this.tempo_final = tempo_final;
         this.usuario = usuario;
         this.status = status;
         this.multa = multa;
@@ -63,12 +71,20 @@ public class Aluguel {
         this.id = id;
     }
 
-    public Date getTempo() {
-        return tempo;
+    public Date getTempo_inicio() {
+        return tempo_inicio;
     }
 
-    public void setTempo(Date tempo) {
-        this.tempo = tempo;
+    public void setTempo_inicio(Date tempo_inicio) {
+        this.tempo_inicio = tempo_inicio;
+    }
+
+    public Date getTempo_final() {
+        return tempo_final;
+    }
+
+    public void setTempo_final(Date tempo_final) {
+        this.tempo_final = tempo_final;
     }
 
     public Usuario getUsuario() {

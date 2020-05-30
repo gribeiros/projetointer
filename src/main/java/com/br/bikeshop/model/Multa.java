@@ -1,6 +1,7 @@
 package com.br.bikeshop.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -19,6 +20,7 @@ public class Multa {
 
     @Temporal(TemporalType.DATE)
     @Column(name = "tempo", nullable = false)
+    @JsonFormat(pattern = "dd-MM-yyyy")
     private Date tempo;
 
     @JsonBackReference
