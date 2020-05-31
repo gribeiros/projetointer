@@ -22,6 +22,9 @@ public class Multa {
     @JsonFormat(pattern = "dd-MM-yyyy")
     private Date tempo;
 
+    @OneToOne(mappedBy = "multa")
+    private Aluguel aluguel;
+
     public Long getId() {
         return id;
     }
@@ -44,5 +47,13 @@ public class Multa {
 
     public void setTempo(Date tempo) {
         this.tempo = tempo;
+    }
+
+    public Aluguel getAluguel() {
+        return aluguel;
+    }
+
+    public void setAluguel(Aluguel aluguel) {
+        this.aluguel = aluguel;
     }
 }

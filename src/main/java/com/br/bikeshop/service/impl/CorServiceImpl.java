@@ -28,8 +28,7 @@ public class CorServiceImpl implements CorService {
     @Override
     @Transactional
     public ResponseEntity saveCor(Cor cor) {
-        corRepository.save(cor);
-        return new ResponseEntity(cor, HttpStatus.OK);
+        return new ResponseEntity(corRepository.save(cor), HttpStatus.OK);
     }
 
     @Override

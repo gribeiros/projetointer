@@ -14,6 +14,9 @@ public class MetodoDePagamento {
     @Column(nullable = false, unique = true, length = 25, name = "pagamento")
     private String pagamento;
 
+    @OneToOne(mappedBy = "metodoDePagamento")
+    private Aluguel aluguel;
+
     public Long getId() {
         return id;
     }
@@ -28,5 +31,13 @@ public class MetodoDePagamento {
 
     public void setPagamento(String pagamento) {
         this.pagamento = pagamento;
+    }
+
+    public Aluguel getAluguel() {
+        return aluguel;
+    }
+
+    public void setAluguel(Aluguel aluguel) {
+        this.aluguel = aluguel;
     }
 }

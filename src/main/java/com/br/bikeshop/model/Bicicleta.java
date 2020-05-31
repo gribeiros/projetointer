@@ -11,7 +11,7 @@ import java.util.Objects;
 @Table(name = "bicicleta")
 public class Bicicleta implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 11L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,6 +32,9 @@ public class Bicicleta implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_modelo", nullable = false)
     private Modelo modelo;
+
+    @OneToOne(mappedBy = "bicicleta")
+    private Aluguel aluguel;
 
     public Bicicleta() {
     }
@@ -72,6 +75,14 @@ public class Bicicleta implements Serializable {
 
     public void setModelo(Modelo modelo) {
         this.modelo = modelo;
+    }
+
+    public Aluguel getAluguel() {
+        return aluguel;
+    }
+
+    public void setAluguel(Aluguel aluguel) {
+        this.aluguel = aluguel;
     }
 
     @Override

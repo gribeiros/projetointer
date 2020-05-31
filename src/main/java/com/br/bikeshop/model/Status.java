@@ -16,6 +16,8 @@ public class Status {
     @NotBlank(message = "Status not null")
     private String status;
 
+    @OneToOne(mappedBy = "status")
+    private Aluguel aluguel;
 
     public Long getId() {
         return id;
@@ -31,5 +33,13 @@ public class Status {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Aluguel getAluguel() {
+        return aluguel;
+    }
+
+    public void setAluguel(Aluguel aluguel) {
+        this.aluguel = aluguel;
     }
 }

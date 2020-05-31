@@ -19,9 +19,12 @@ public class Usuario {
     private String senha;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    @OneToOne(fetch = FetchType.LAZY,optional = false)
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "id_pessoa")
     private Pessoa pessoa;
+
+    @OneToOne(mappedBy = "usuario")
+    private Aluguel aluguel;
 
     public Usuario() {
     }
@@ -63,5 +66,13 @@ public class Usuario {
 
     public void setPessoa(Pessoa pessoa) {
         this.pessoa = pessoa;
+    }
+
+    public Aluguel getAluguel() {
+        return aluguel;
+    }
+
+    public void setAluguel(Aluguel aluguel) {
+        this.aluguel = aluguel;
     }
 }
