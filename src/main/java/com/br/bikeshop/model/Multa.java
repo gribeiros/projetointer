@@ -1,5 +1,6 @@
 package com.br.bikeshop.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
@@ -22,6 +23,7 @@ public class Multa {
     @JsonFormat(pattern = "dd-MM-yyyy")
     private Date tempo;
 
+    @JsonBackReference
     @OneToOne(mappedBy = "multa")
     private Aluguel aluguel;
 

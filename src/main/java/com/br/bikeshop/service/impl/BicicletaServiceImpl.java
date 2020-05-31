@@ -6,6 +6,7 @@ import com.br.bikeshop.repository.CorRepository;
 import com.br.bikeshop.repository.MarcaRepository;
 import com.br.bikeshop.repository.ModeloRepository;
 import com.br.bikeshop.service.BicicletaService;
+import com.br.bikeshop.view.BicicletaSaveAndUpdate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -74,9 +75,9 @@ public class BicicletaServiceImpl implements BicicletaService {
 
     @Override
     @Transactional
-    public ResponseEntity updateBicicleta(Long id, Long marca, Long cor, Long modelo) {
-        Bicicleta bicicleta = new Bicicleta(marcaRepository.findById(marca).get(), corRepository.findById(cor).get(), modeloRepository.findById(modelo).get());
-        bicicleta.setId(id);
+    public ResponseEntity updateBicicleta(BicicletaSaveAndUpdate bicicletaSaveAndUpdate) {
+        Bicicleta bicicleta = new Bicicleta(marcaRepository.findById(bicicletaSaveAndUpdate.getMarca()).get(), corRepository.findById(bicicletaSaveAndUpdate.getCor()).get(), modeloRepository.findById(bicicletaSaveAndUpdate.getModelo()).get());
+        bicicleta.setId(bicicletaSaveAndUpdate.getId());
         bicicletaRepository.save(bicicleta);
         return new ResponseEntity("Bicileta atualizada", HttpStatus.OK);
     }

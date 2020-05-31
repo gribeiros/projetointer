@@ -30,5 +30,5 @@ public interface BicicletaController {
 
     @PutMapping(path = "/{id}")
     @ApiOperation(value = "Atualiza um bicicleta por ID")
-    ResponseEntity updateBicicleta(@PathVariable Long id, @RequestBody BicicletaSaveAndUpdate bicicletaSaveAndUpdate);
+    ResponseEntity updateBicicleta(@RequestBody BicicletaSaveAndUpdate bicicletaSaveAndUpdate);
 }

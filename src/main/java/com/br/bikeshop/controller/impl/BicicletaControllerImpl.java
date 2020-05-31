@@ -44,8 +44,8 @@ public class BicicletaControllerImpl implements BicicletaController {
     }
 
     @Override
-    public ResponseEntity updateBicicleta(Long id, BicicletaSaveAndUpdate bicicletaSaveAndUpdate) {
-        ResponseEntity responseEntity = bicicletaService.updateBicicleta(id, bicicletaSaveAndUpdate.getMarca(), bicicletaSaveAndUpdate.getCor(), bicicletaSaveAndUpdate.getModelo());
+    public ResponseEntity updateBicicleta(BicicletaSaveAndUpdate bicicletaSaveAndUpdate) {
+        ResponseEntity responseEntity = bicicletaService.updateBicicleta(bicicletaSaveAndUpdate);
         return responseEntity;
     }
 

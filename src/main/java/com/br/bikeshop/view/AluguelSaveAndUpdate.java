@@ -7,7 +7,9 @@ import java.sql.Date;
 public class AluguelSaveAndUpdate {
     private Long id;
     @JsonFormat(pattern = "dd-MM-yyyy")
-    private Date data;
+    private Date tempo_inicio;
+    @JsonFormat(pattern = "dd-MM-yyyy")
+    private Date tempo_final;
     private Long bicicleta;
     private Long metodoDePagamento;
     private Long multa;
@@ -17,9 +19,10 @@ public class AluguelSaveAndUpdate {
     public AluguelSaveAndUpdate() {
     }
 
-    public AluguelSaveAndUpdate(Long id, Date data, Long bicicleta, Long metodoDePagamento, Long multa, Long status, Long usuario) {
+    public AluguelSaveAndUpdate(Long id, Date tempo_inicio, Date tempo_final, Long bicicleta, Long metodoDePagamento, Long multa, Long status, Long usuario) {
         this.id = id;
-        this.data = data;
+        this.tempo_inicio = tempo_inicio;
+        this.tempo_final = tempo_final;
         this.bicicleta = bicicleta;
         this.metodoDePagamento = metodoDePagamento;
         this.multa = multa;
@@ -35,12 +38,20 @@ public class AluguelSaveAndUpdate {
         this.id = id;
     }
 
-    public Date getData() {
-        return data;
+    public Date getTempo_inicio() {
+        return tempo_inicio;
     }
 
-    public void setData(Date data) {
-        this.data = data;
+    public void setTempo_inicio(Date tempo_inicio) {
+        this.tempo_inicio = tempo_inicio;
+    }
+
+    public Date getTempo_final() {
+        return tempo_final;
+    }
+
+    public void setTempo_final(Date tempo_final) {
+        this.tempo_final = tempo_final;
     }
 
     public Long getBicicleta() {

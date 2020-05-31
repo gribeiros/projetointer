@@ -1,5 +1,6 @@
 package com.br.bikeshop.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -23,6 +24,7 @@ public class Usuario {
     @JoinColumn(name = "id_pessoa")
     private Pessoa pessoa;
 
+    @JsonBackReference
     @OneToOne(mappedBy = "usuario")
     private Aluguel aluguel;
 

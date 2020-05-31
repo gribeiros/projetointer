@@ -25,27 +25,27 @@ public class Aluguel {
     private Date tempo_final;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = false)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_usuario", nullable = false)
     private Usuario usuario;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = false)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_status", nullable = false)
     private Status status;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = false)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_multa", unique = true)
     private Multa multa;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = false)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_metodo_de_pagamento", nullable = false)
     private MetodoDePagamento metodoDePagamento;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = false)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_bicicleta", nullable = false)
     private Bicicleta bicicleta;
 
@@ -54,6 +54,16 @@ public class Aluguel {
 
     public Aluguel(Long id, Date tempo_inicio, Date tempo_final, Usuario usuario, Status status, Multa multa, MetodoDePagamento metodoDePagamento, Bicicleta bicicleta) {
         this.id = id;
+        this.tempo_inicio = tempo_inicio;
+        this.tempo_final = tempo_final;
+        this.usuario = usuario;
+        this.status = status;
+        this.multa = multa;
+        this.metodoDePagamento = metodoDePagamento;
+        this.bicicleta = bicicleta;
+    }
+
+    public Aluguel(Date tempo_inicio, Date tempo_final, Usuario usuario, Status status, Multa multa, MetodoDePagamento metodoDePagamento, Bicicleta bicicleta) {
         this.tempo_inicio = tempo_inicio;
         this.tempo_final = tempo_final;
         this.usuario = usuario;

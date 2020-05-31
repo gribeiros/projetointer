@@ -1,6 +1,7 @@
 package com.br.bikeshop.service;
 
 import com.br.bikeshop.model.Bicicleta;
+import com.br.bikeshop.view.BicicletaSaveAndUpdate;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
@@ -16,6 +17,6 @@ public interface BicicletaService {
 
     ResponseEntity deleteBiciclieta(Long id);
 
-    ResponseEntity updateBicicleta(Long id, Long marca, Long cor, Long modelo);
+    ResponseEntity updateBicicleta(BicicletaSaveAndUpdate bicicletaSaveAndUpdate);
 
 }

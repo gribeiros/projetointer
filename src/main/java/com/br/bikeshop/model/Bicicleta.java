@@ -1,6 +1,7 @@
 package com.br.bikeshop.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -33,6 +34,7 @@ public class Bicicleta implements Serializable {
     @JoinColumn(name = "id_modelo", nullable = false)
     private Modelo modelo;
 
+    @JsonBackReference
     @OneToOne(mappedBy = "bicicleta")
     private Aluguel aluguel;
 
