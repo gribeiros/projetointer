@@ -64,4 +64,14 @@ public class AluguelServiceImpl implements AluguelService {
         aluguelRepository.saveAndFlush(aluguel);
         return new ResponseEntity("Atualizado", HttpStatus.OK);
     }
+
+    @Override
+    public ResponseEntity findByName(String name) {
+        Aluguel aluguel = aluguelRepository.findByName(name);
+        if (aluguel != null) {
+            return new ResponseEntity(aluguel, HttpStatus.OK);
+        } else {
+            return new ResponseEntity("Not Found!", HttpStatus.BAD_REQUEST);
+        }
+    }
 }

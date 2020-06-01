@@ -15,4 +15,6 @@ public interface AluguelService {
 
     ResponseEntity updateAlguel(AluguelSaveAndUpdate aluguelSaveAndUpdate);
 
+    ResponseEntity findByName(String name);
+
 }

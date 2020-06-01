@@ -14,4 +14,7 @@ public interface AluguelRepository extends JpaRepository<Aluguel, Long> {
 
     @Query("Select a from Aluguel a,Usuario u,Status s, MetodoDePagamento mdp,Bicicleta b JOIN FETCH a.usuario uf JOIN FETCH a.status sf JOIN FETCH a.metodoDePagamento mdpf JOIN FETCH a.bicicleta bf where uf=u.id and sf=s.id and mdpf=mdp.id and bf=b.id and a.id=?1")
     Aluguel returnById(Long id);
+
+    @Query("Select a from Aluguel a,Usuario u,Status s, MetodoDePagamento mdp,Bicicleta b JOIN FETCH a.usuario uf JOIN FETCH a.status sf JOIN FETCH a.metodoDePagamento mdpf JOIN FETCH a.bicicleta bf where uf=u.id and sf=s.id and mdpf=mdp.id and bf=b.id and u.pessoa.nome=?1")
+    Aluguel findByName(String name);
 }

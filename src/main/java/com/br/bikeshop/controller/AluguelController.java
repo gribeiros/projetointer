@@ -20,6 +20,10 @@ public interface AluguelController {
     @ApiOperation(value = "Retorna uma aluguel por ID")
     ResponseEntity aluguel(@PathVariable Long id);
 
+    @GetMapping(path = "/name/{name}")
+    @ApiOperation(value = "Retorna uma aluguel por ID")
+    ResponseEntity aluguelFindByName(@PathVariable String name);
+
     @PostMapping(path = "")
     @ApiOperation(value = "Salva uma nova aluguel")
     ResponseEntity saveAluguel(@RequestBody AluguelSaveAndUpdate aluguelSaveAndUpdate);

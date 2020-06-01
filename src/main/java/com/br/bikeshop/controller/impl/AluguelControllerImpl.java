@@ -24,6 +24,11 @@ public class AluguelControllerImpl implements AluguelController {
     }
 
     @Override
+    public ResponseEntity aluguelFindByName(String name) {
+        return aluguelService.findByName(name);
+    }
+
+    @Override
     public ResponseEntity saveAluguel(AluguelSaveAndUpdate aluguelSaveAndUpdate) {
         return aluguelService.saveAluguel(aluguelSaveAndUpdate);
     }
