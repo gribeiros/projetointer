@@ -20,6 +20,10 @@ public interface UsuarioController {
     @ApiOperation(value = "Retorna um usuário por ID")
     ResponseEntity modelo(@PathVariable Long id);
 
+    @GetMapping(path = "/name/{name}")
+    @ApiOperation(value = "Retorna um usuário por nome")
+    ResponseEntity modeloByName(@PathVariable String name);
+
     @PostMapping(path = "")
     @ApiOperation(value = "Salva um novo usuário")
     ResponseEntity saveModelo(@RequestBody UsuarioSaveAndUpdate usuarioSaveAndUpdate);

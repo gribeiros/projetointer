@@ -59,4 +59,14 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuarioRepository.saveAndFlush(usuario);
         return new ResponseEntity("Atualizado!", HttpStatus.OK);
     }
+
+    @Override
+    public ResponseEntity findByName(String name) {
+        Usuario usuario = usuarioRepository.returnByName(name);
+        if (usuario != null) {
+            return new ResponseEntity(usuario, HttpStatus.OK);
+        } else {
+            return new ResponseEntity("Not Found!", HttpStatus.BAD_REQUEST);
+        }
+    }
 }

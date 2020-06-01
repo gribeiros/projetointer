@@ -25,6 +25,11 @@ public class UsuarioControllerImpl implements UsuarioController {
     }
 
     @Override
+    public ResponseEntity modeloByName(String name) {
+        return usuarioService.findByName(name);
+    }
+
+    @Override
     public ResponseEntity saveModelo(UsuarioSaveAndUpdate usuarioSaveAndUpdate) {
         return usuarioService.saveUsuario(usuarioSaveAndUpdate);
     }

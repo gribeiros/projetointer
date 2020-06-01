@@ -18,4 +18,6 @@ public interface UsuarioService {
 
     ResponseEntity updateUsuario(UsuarioSaveAndUpdate usuarioSaveAndUpdate);
 
+    ResponseEntity findByName(String name);
+
 }

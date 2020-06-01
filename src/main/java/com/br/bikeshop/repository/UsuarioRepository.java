@@ -12,4 +12,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     @Query("Select u from Usuario u,Pessoa p JOIN FETCH u.pessoa pf where pf=p.id")
     List<Usuario> returnAll();
 
+    @Query("Select u from Usuario u,Pessoa p JOIN FETCH u.pessoa pf where pf=p.id and u.login=?1")
+    Usuario returnByName(String name);
+
 }
