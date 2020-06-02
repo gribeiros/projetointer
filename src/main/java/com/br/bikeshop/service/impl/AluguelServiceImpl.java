@@ -37,7 +37,13 @@ public class AluguelServiceImpl implements AluguelService {
 
     @Override
     public ResponseEntity saveAluguel(AluguelSaveAndUpdate aluguelSaveAndUpdate) {
-        Aluguel aluguel = new Aluguel(aluguelSaveAndUpdate.getTempo_inicio(), aluguelSaveAndUpdate.getTempo_final(), usuarioRepository.findById(aluguelSaveAndUpdate.getUsuario()).get(), statusRepository.findById(aluguelSaveAndUpdate.getStatus()).get(), multaRepository.findById(aluguelSaveAndUpdate.getMulta()).get(), metodoDePagamentoRepository.findById(aluguelSaveAndUpdate.getMetodoDePagamento()).get(), bicicletaRepository.findById(aluguelSaveAndUpdate.getBicicleta()).get());
+        Aluguel aluguel;
+
+        if (aluguelSaveAndUpdate.getMulta() != null) {
+            aluguel = new Aluguel(aluguelSaveAndUpdate.getId(), aluguelSaveAndUpdate.getTempo_inicio(), aluguelSaveAndUpdate.getTempo_final(), usuarioRepository.findById(aluguelSaveAndUpdate.getUsuario()).get(), statusRepository.findById(aluguelSaveAndUpdate.getStatus()).get(), multaRepository.findById(aluguelSaveAndUpdate.getMulta()).get(), metodoDePagamentoRepository.findById(aluguelSaveAndUpdate.getMetodoDePagamento()).get(), bicicletaRepository.findById(aluguelSaveAndUpdate.getBicicleta()).get());
+        } else {
+            aluguel = new Aluguel(aluguelSaveAndUpdate.getId(), aluguelSaveAndUpdate.getTempo_inicio(), aluguelSaveAndUpdate.getTempo_final(), usuarioRepository.findById(aluguelSaveAndUpdate.getUsuario()).get(), statusRepository.findById(aluguelSaveAndUpdate.getStatus()).get(), null, metodoDePagamentoRepository.findById(aluguelSaveAndUpdate.getMetodoDePagamento()).get(), bicicletaRepository.findById(aluguelSaveAndUpdate.getBicicleta()).get());
+        }
         aluguelRepository.save(aluguel);
         return new ResponseEntity(aluguel, HttpStatus.OK);
     }
@@ -60,9 +66,15 @@ public class AluguelServiceImpl implements AluguelService {
 
     @Override
     public ResponseEntity updateAlguel(AluguelSaveAndUpdate aluguelSaveAndUpdate) {
-        Aluguel aluguel = new Aluguel(aluguelSaveAndUpdate.getId(), aluguelSaveAndUpdate.getTempo_inicio(), aluguelSaveAndUpdate.getTempo_final(), usuarioRepository.findById(aluguelSaveAndUpdate.getUsuario()).get(), statusRepository.findById(aluguelSaveAndUpdate.getStatus()).get(), multaRepository.findById(aluguelSaveAndUpdate.getMulta()).get(), metodoDePagamentoRepository.findById(aluguelSaveAndUpdate.getMetodoDePagamento()).get(), bicicletaRepository.findById(aluguelSaveAndUpdate.getBicicleta()).get());
+        Aluguel aluguel;
+
+        if (aluguelSaveAndUpdate.getMulta() != null) {
+            aluguel = new Aluguel(aluguelSaveAndUpdate.getId(), aluguelSaveAndUpdate.getTempo_inicio(), aluguelSaveAndUpdate.getTempo_final(), usuarioRepository.findById(aluguelSaveAndUpdate.getUsuario()).get(), statusRepository.findById(aluguelSaveAndUpdate.getStatus()).get(), multaRepository.findById(aluguelSaveAndUpdate.getMulta()).get(), metodoDePagamentoRepository.findById(aluguelSaveAndUpdate.getMetodoDePagamento()).get(), bicicletaRepository.findById(aluguelSaveAndUpdate.getBicicleta()).get());
+        } else {
+            aluguel = new Aluguel(aluguelSaveAndUpdate.getId(), aluguelSaveAndUpdate.getTempo_inicio(), aluguelSaveAndUpdate.getTempo_final(), usuarioRepository.findById(aluguelSaveAndUpdate.getUsuario()).get(), statusRepository.findById(aluguelSaveAndUpdate.getStatus()).get(), null, metodoDePagamentoRepository.findById(aluguelSaveAndUpdate.getMetodoDePagamento()).get(), bicicletaRepository.findById(aluguelSaveAndUpdate.getBicicleta()).get());
+        }
         aluguelRepository.saveAndFlush(aluguel);
-        return new ResponseEntity("Atualizado", HttpStatus.OK);
+        return new ResponseEntity(aluguel, HttpStatus.OK);
     }
 
     @Override

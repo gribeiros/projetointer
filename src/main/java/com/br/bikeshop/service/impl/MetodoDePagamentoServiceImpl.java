@@ -12,9 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
 
-
-import java.util.stream.Collectors;
-
 @Service
 public class MetodoDePagamentoServiceImpl implements MetodoDePagamentoService {
 
@@ -26,7 +23,7 @@ public class MetodoDePagamentoServiceImpl implements MetodoDePagamentoService {
     @Override
     @Transactional
     public List<MetodoDePagamento> returnMetodosDePagamentos() {
-        return metodoDePagamentoRepository.findAll().stream().sorted((o1, o2) -> (int) (o1.getId() - o2.getId())).collect(Collectors.toList());
+        return metodoDePagamentoRepository.findAll();
     }
 
     @Override

@@ -1,7 +1,5 @@
 package com.br.bikeshop.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
 import javax.persistence.*;
 
 @Entity(name = "MetodoDePagamento")
@@ -16,9 +14,7 @@ public class MetodoDePagamento {
     @Column(nullable = false, unique = true, length = 25, name = "pagamento")
     private String pagamento;
 
-    @JsonBackReference
-    @OneToOne(mappedBy = "metodoDePagamento")
-    private Aluguel aluguel;
+
 
     public Long getId() {
         return id;
@@ -36,11 +32,4 @@ public class MetodoDePagamento {
         this.pagamento = pagamento;
     }
 
-    public Aluguel getAluguel() {
-        return aluguel;
-    }
-
-    public void setAluguel(Aluguel aluguel) {
-        this.aluguel = aluguel;
-    }
 }

@@ -8,10 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 
-
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 
 @Controller
@@ -22,8 +19,7 @@ public class MetodoDePagamentoControllerImpl implements MetodoDePagamentoControl
 
     @Override
     public ResponseEntity metodosDePagamentos() {
-        List<MetodoDePagamento> metodoDePagamentos = metodoDePagamentoService.returnMetodosDePagamentos();
-        return new ResponseEntity(metodoDePagamentos.stream().sorted((o1, o2) -> (int) (o1.getId() - o2.getId())).collect(Collectors.toList()), HttpStatus.OK);
+        return new ResponseEntity(metodoDePagamentoService.returnMetodosDePagamentos(), HttpStatus.OK);
 
     }
 
