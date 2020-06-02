@@ -4,7 +4,6 @@ import com.br.bikeshop.model.Pessoa;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface PessoaService {
 
@@ -17,5 +16,7 @@ public interface PessoaService {
     ResponseEntity deletePessoa(Long id);
 
     ResponseEntity updatePessoa(Pessoa pessoa);
+
+    ResponseEntity findByName(String cpf);
 
 }

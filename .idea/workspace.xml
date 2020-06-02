@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="437f5c6d-38e0-4572-8c0a-7c5dd727296e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/MetodoDePagamentoControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/controller/impl/MetodoDePagamentoControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Aluguel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Aluguel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/MetodoDePagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/MetodoDePagamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Multa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Multa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/model/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/AluguelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/AluguelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/MetodoDePagamentoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/MetodoDePagamentoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/PessoaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/repository/PessoaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/PessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/PessoaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/PessoaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/bikeshop/service/impl/PessoaServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591050002157</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Corrigido API's.">
+      <created>1591122194305</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1591122194305</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -216,7 +218,8 @@
     <MESSAGE value="Atualização dos models." />
     <MESSAGE value="Adicionado API de aluguel." />
     <MESSAGE value="Validação de login." />
-    <option name="LAST_COMMIT_MESSAGE" value="Validação de login." />
+    <MESSAGE value="Corrigido API's." />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrigido API's." />
   </component>
   <component name="WindowStateProjectService">
     <state x="726" y="224" key="#Auto_Import" timestamp="1587826464529">
@@ -239,11 +242,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="224" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586035384413" />
-    <state x="675" y="124" width="544" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1591050758605">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="524" y="115" width="544" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1591123717264">
+      <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="675" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1591050758605" />
-    <state x="524" y="115" width="544" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1589127313887" />
+    <state x="524" y="115" width="544" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1591123717264" />
     <state x="614" y="318" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587401594818">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -270,10 +273,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587271050240" />
-    <state x="567" y="88" key="CommitChangelistDialog2" timestamp="1591050000538">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="284" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1591122193875">
+      <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="567" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591050000538" />
+    <state x="284" y="27" width="912" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1591122193875" />
     <state x="694" y="281" key="EnvironmentVariablesDialog" timestamp="1586035387609">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -332,10 +336,11 @@
     </state>
     <state x="204" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590870183210" />
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1584644845150" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1591050011763">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="440" y="207" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1591122269932">
+      <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591050011763" />
+    <state x="440" y="207" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1591122269932" />
     <state x="451" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1586033752472">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

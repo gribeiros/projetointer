@@ -1,6 +1,5 @@
 package com.br.bikeshop.service.impl;
 
-import com.br.bikeshop.model.Cor;
 import com.br.bikeshop.model.Pessoa;
 import com.br.bikeshop.repository.PessoaRepository;
 import com.br.bikeshop.service.PessoaService;
@@ -50,5 +49,15 @@ public class PessoaServiceImpl implements PessoaService {
     public ResponseEntity updatePessoa(Pessoa pessoa) {
         pessoaRepository.saveAndFlush(pessoa);
         return new ResponseEntity(pessoa, HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity findByName(String cpf) {
+        Pessoa pessoa = pessoaRepository.findByName(cpf);
+        if (pessoa != null) {
+            return new ResponseEntity(pessoa, HttpStatus.OK);
+        } else {
+            return new ResponseEntity("Not Found!", HttpStatus.BAD_REQUEST);
+        }
     }
 }

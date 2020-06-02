@@ -20,6 +20,10 @@ public interface PessoaController {
     @ApiOperation(value = "Procura uma pessoa pelo id")
     ResponseEntity findById(@PathVariable Long id);
 
+    @GetMapping(path = "/cpf/{cpf}")
+    @ApiOperation(value = "Procura uma pessoa pelo cpf")
+    ResponseEntity findByName(@PathVariable String cpf);
+
     @PostMapping(path = "")
     @ApiOperation(value = "Salva uma pessoa nova")
     ResponseEntity save(@RequestBody Pessoa pessoa);
